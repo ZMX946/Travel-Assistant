@@ -2,6 +2,15 @@
 
 基于 LangGraph 和 LLM 的智能旅游行程规划助手，能够根据用户需求自动规划详细的旅游行程，包括景点推荐、路线规划、餐饮住宿等全方位服务。
 
+Please cite the paper if this is helpful to you:
+
+> Wei Kang, Maoxuan Zhou, Yu Guo, Tianfu Li, Jiandong Li, Yuwei Liu.  
+> *Generative adversarial augmented multi-scale CNN for machine fault diagnosis*.  
+> Control Engineering Practice, Volume 167, 2026, 106625.  
+> https://doi.org/10.1016/j.conengprac.2025.106625  
+> https://www.sciencedirect.com/science/article/pii/S0967066125003879
+
+
 ## 🌟 功能特色
 
 - **智能目的地推荐**：根据用户需求推荐合适的旅游目的地
@@ -50,7 +59,7 @@
 
 ## 📋 环境要求
 
-- Python 3.8+
+- Python 3.11
 - Chrome 浏览器（用于 Selenium）
 - 高德地图 API Key
 - OpenAI API Key
@@ -88,6 +97,7 @@ python webrun.py
 
 ## 🎯 使用指南
 
+
 ### 基本使用流程
 
 1. **输入旅游需求**：描述您的旅游偏好、时间、预算等
@@ -96,19 +106,7 @@ python webrun.py
 4. **查看行程**：获得详细的每日行程安排
 5. **完善服务**：添加餐饮和住宿推荐
 
-### 示例对话
 
-```
-用户：我想去长沙旅游，时间是3天，喜欢历史文化景点
-
-机器人：任务：根据用户提供的目的地（长沙）和旅游时间（3天），获取长沙的历史文化景点信息。
-回顾：用户明确表示想去长沙旅游，并且对历史文化景点感兴趣。接下来需要获取长沙的相关景点信息，以便为用户规划行程。
-思考：我将调用“景点搜索工具”获取长沙的历史文化景点信息，包括景点简介、开放时间和预计游玩时间。
-计划：调用“functions.get_attractions_information”工具，获取长沙的景点信息。
-工具调用：......
-
-请您查看这个行程安排，看看是否符合您的需求，或者是否需要进行调整！
-```
 
 ## 🔧 核心工具说明
 
@@ -120,16 +118,3 @@ python webrun.py
 | `search_nearby_poi` | 搜索周边设施 | 高德地图 API |
 | `web_search` | 网络信息搜索 | DuckDuckGo |
 
-## 🎨 界面特色
-
-- **双栏布局**：左侧显示调试信息，右侧为对话界面
-- **实时流式输出**：支持打字机效果的实时响应
-- **工具执行可视化**：实时显示工具调用过程
-- **响应式设计**：适配不同屏幕尺寸
-
-## 🔒 注意事项
-
-1. **API 配额**：请注意 OpenAI 和高德地图 API 的使用配额
-2. **网络稳定性**：景点信息爬取需要稳定的网络连接
-3. **浏览器依赖**：确保系统已安装 Chrome 浏览器
-4. **数据准确性**：景点信息来源于网络，建议出行前再次确认
