@@ -2,7 +2,7 @@
 from langgraph.graph import StateGraph, START
 from states.state import PublicState
 from langgraph.prebuilt import ToolNode, tools_condition
-from prompts.prompt import agent_prompt_template
+from prompts.prompts import agent_prompt_template
 from tools import *
 
 def create_graph(model_name, is_async=True):
